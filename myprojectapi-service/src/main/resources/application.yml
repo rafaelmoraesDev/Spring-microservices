@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: myproject-service
+  config:
+    import:
+    - optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: default
+myproject-service:
+  myproject: "Hello"
+  default-value: "World"  
